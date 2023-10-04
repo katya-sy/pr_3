@@ -107,6 +107,10 @@ ul {
   overflow-x: auto;
 }
 
+.services__menu::-webkit-scrollbar {
+  height: 0;
+}
+
 .services__item {
   white-space: nowrap;
   border-radius: 6px;
