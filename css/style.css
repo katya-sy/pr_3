@@ -100,10 +100,31 @@ ul {
   background-color: #41f6d7;
 }
 
+.tabs__panel {
+  display: none;
+}
+.tabs__nav {
+  list-style: none;
+  display: flex;
+}
+.tabs__panel--active {
+  display: block;
+}
+.tabs__nav-btn:focus {
+  border-radius: 6px;
+  border: 2px solid #b8ffec;
+  padding: 8px 10px;
+  background-color: #fff;
+}
+.tabs__nav-btn--active {
+  background-color: transparent;
+}
+
 .services__menu {
   display: flex;
+  align-items: center;
   margin-bottom: 30px;
-  gap: 10px;
+  gap: 20px;
   overflow-x: auto;
 }
 
@@ -113,10 +134,6 @@ ul {
 
 .services__item {
   white-space: nowrap;
-  border-radius: 6px;
-  border: 2px solid #b8ffec;
-  padding: 8px 10px;
-  background-color: #fff;
   color: #7e7e82;
   font-family: TT Lakes;
   font-size: 16px;
