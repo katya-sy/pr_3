@@ -5,31 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/tabs.js" defer></script>
     <title>Document</title>
   </head>
   <body>
     <header class="header">
       <div class="header__wrapper">
         <div class="header__left">
-          <button class="header__menu" aria-label="открыть меню">
-            <img src="img/burger.svg" class="header__menu-img" aria-hidden />
+          <button class="header__btn" aria-label="открыть меню">
+            <img src="img/burger.svg" class="header__btn-img" aria-hidden />
           </button>
-          <a class="header__logo" aria-label="перейти на главную">
-            <img src="img/logo.svg" class="header__logo-img" alt="наше лого" />
+          <a class="logo header__logo" aria-label="перейти на главную">
+            <img
+              src="img/logo.svg"
+              class="logo-img header__logo-img"
+              alt="наше лого"
+            />
           </a>
         </div>
         <div class="header__right">
-          <button class="header__settings" aria-label="открыть настройки">
-            <img
-              src="img/settings.svg"
-              class="header__settings-img"
-              aria-hidden
-            />
+          <button class="header__btn" aria-label="открыть настройки">
+            <img src="img/settings.svg" class="header__btn-img" aria-hidden />
           </button>
-          <button class="header__search" aria-label="открыть поиск">
+          <button class="header__btn" aria-label="открыть поиск">
             <img
               src="img/checkstatus.svg"
-              class="header__search-img"
+              class="header__btn-img"
               aria-hidden
             />
           </button>
@@ -173,7 +174,76 @@
           </div>
         </div>
       </section>
+      <section class="sidebar">
+        <div class="sidebar__wrapper">
+          <div class="sidebar__header">
+            <div class="sidebar__left">
+              <button class="sidebar__btn" aria-label="закрыть меню">
+                <img src="img/close.svg" class="sidebar__btn-img" aria-hidden />
+              </button>
+              <a class="logo sidebar__logo" aria-label="перейти на главную">
+                <img
+                  src="img/logo.svg"
+                  class="logo-img sidebar__logo-img"
+                  alt="наше лого"
+                />
+              </a>
+            </div>
+            <div class="siderbar__right">
+              <button class="sidebar__btn" aria-label="открыть поиск">
+                <img
+                  src="img/search.svg"
+                  class="sidebar__btn-img"
+                  aria-hidden
+                />
+              </button>
+            </div>
+          </div>
+          <ul class="sidebar__nav">
+            <li class="sidebar__nav-item">Ремонт техники</li>
+            <li class="sidebar__nav-item">Ремонт техники</li>
+            <li class="sidebar__nav-item">Ремонт техники</li>
+            <li class="sidebar__nav-item">Ремонт техники</li>
+            <li class="sidebar__nav-item">Ремонт техники</li>
+            <li class="sidebar__nav-item">Ремонт техники</li>
+            <li class="sidebar__nav-item">Ремонт техники</li>
+            <li class="sidebar__nav-item">Ремонт техники</li>
+          </ul>
+        </div>
+
+        <div class="sidebar__footer">
+          <ul class="sidebar__footer-menu">
+            <li class="sidebar__footer-item">
+              <button class="sidebar__btn" aria-label="позвонить">
+                <img src="img/tel.svg" class="sidebar__btn-img" aria-hidden />
+              </button>
+            </li>
+            <li class="sidebar__footer-item">
+              <button class="sidebar__btn" aria-label="открыть чат">
+                <img src="img/chat.svg" class="sidebar__btn-img" aria-hidden />
+              </button>
+            </li>
+            <li class="sidebar__footer-item">
+              <button class="sidebar__btn" aria-label="войти в профиль">
+                <img
+                  src="img/profile.svg"
+                  class="sidebar__btn-img"
+                  aria-hidden
+                />
+              </button>
+            </li>
+          </ul>
+          <div class="sidebar__contacts">
+            <p class="sidebar__email">mail@cps.com</p>
+            <p class="sidebar__tel">8 800 890 8900</p>
+          </div>
+          <ul class="sidebar__change">
+            <li class="sidebar__change-item">RU</li>
+            <li class="sidebar__change-item">EN</li>
+            <li class="sidebar__change-item">CH</li>
+          </ul>
+        </div>
+      </section>
     </main>
-    <script src="js/tabs.js"></script>
   </body>
 </html>

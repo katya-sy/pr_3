@@ -72,7 +72,7 @@ ul {
   background-color: #eaeaea;
 }
 
-.header__logo {
+.logo {
   width: 96px;
   height: 50px;
 }
@@ -184,6 +184,84 @@ ul {
 .services__img {
   width: 100%;
   height: auto;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 270px;
+  padding: 20px 24px 32px;
+  flex-shrink: 0;
+  width: 320px;
+  background-color: #fff;
+  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
+    -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+}
+
+.sidebar__header {
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar__left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sidebar__nav {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sidebar__nav-item {
+  color: #1b1c21;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.sidebar__footer-menu {
+  display: flex;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+
+.sidebar__contacts {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  gap: 12px;
+}
+
+.sidebar__email {
+  color: #1b1c21;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.sidebar__tel {
+  color: #1b1c21;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+}
+
+.sidebar__change {
+  display: flex;
+  gap: 7px;
 }
 
 @media (min-width: 768px) {
