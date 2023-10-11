@@ -207,6 +207,7 @@ ul {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 270px;
   padding: 20px 24px 32px;
   flex-shrink: 0;
@@ -244,6 +245,22 @@ ul {
   letter-spacing: -0.2px;
 }
 
+.sidebar__nav-item:active a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #7e7e82;
+}
+
+.sidebar__nav-item:active a::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 32px;
+  margin-left: -24px;
+  background-color: #41f6d7;
+}
+
 .sidebar__footer-menu {
   display: flex;
   margin-bottom: 16px;
@@ -276,6 +293,18 @@ ul {
 .sidebar__change {
   display: flex;
   gap: 7px;
+}
+
+.sidebar__change-item {
+  color: #1b1c21;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.sidebar__change-item button:active {
+  color: #7e7e82;
 }
 
 @media (min-width: 768px) {
