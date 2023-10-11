@@ -207,7 +207,6 @@ ul {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 270px;
   padding: 20px 24px 32px;
   flex-shrink: 0;
