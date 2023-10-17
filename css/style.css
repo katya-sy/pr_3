@@ -203,7 +203,7 @@ ul {
 .sidebar {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -320px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -214,6 +214,22 @@ ul {
   background-color: #fff;
   box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
     -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+}
+
+.sidebar--active {
+  left: 0;
+  animation-name: sidebar;
+  animation-duration: 1s;
+}
+
+@keyframes sidebar {
+  from {
+    left: -320px;
+  }
+
+  to {
+    left: 0;
+  }
 }
 
 .sidebar__header {

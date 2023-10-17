@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/tabs.js" defer></script>
+    <script src="js/addActiveClass.js" defer></script>
     <title>Document</title>
   </head>
   <body>
     <header class="header">
       <div class="header__wrapper">
         <div class="header__left">
-          <button class="header__btn" aria-label="открыть меню">
+          <button id="burger" class="header__btn" aria-label="открыть меню">
             <img src="img/burger.svg" class="header__btn-img" aria-hidden />
           </button>
           <a href="#" class="logo header__logo" aria-label="перейти на главную">
@@ -174,11 +175,15 @@
           </div>
         </div>
       </section>
-      <section class="sidebar">
+      <section id="sidebar" class="sidebar">
         <div class="sidebar__wrapper">
           <div class="sidebar__header">
             <div class="sidebar__left">
-              <button class="sidebar__btn" aria-label="закрыть меню">
+              <button
+                id="close-menu"
+                class="sidebar__btn"
+                aria-label="закрыть меню"
+              >
                 <img src="img/close.svg" class="sidebar__btn-img" aria-hidden />
               </button>
               <a
