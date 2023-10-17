@@ -260,14 +260,14 @@ ul {
   letter-spacing: -0.2px;
 }
 
-.sidebar__nav-item:active a {
+.active a {
   display: flex;
   align-items: center;
   gap: 20px;
   color: #7e7e82;
 }
 
-.sidebar__nav-item:active a::before {
+.active a::before {
   content: "";
   display: block;
   width: 4px;
