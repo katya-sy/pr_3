@@ -260,15 +260,16 @@ ul {
   letter-spacing: -0.2px;
 }
 
-.active a {
+.active {
   display: flex;
   align-items: center;
   gap: 20px;
   color: #7e7e82;
 }
 
-.active a::before {
+.active::before {
   content: "";
+  position: absolute;
   display: block;
   width: 4px;
   height: 32px;

@@ -9,13 +9,24 @@ closeMenu.addEventListener("click", () => {
   sidebar.classList.remove("sidebar--active");
 });
 
-const linksNav = document.querySelectorAll(".sidebar__nav-item");
-console.log(linksNav);
-for (let index = 0; index < linksNav.length; index++) {
-  linksNav[index].addEventListener("click", () => {
-    for (let index = 0; index < linksNav.length; index++) {
-      linksNav[index].classList.remove("active");
-    }
-    linksNav[index].classList.add("active");
-  });
-}
+// const linksNav = document.querySelectorAll(".sidebar__nav-item");
+// console.log(linksNav);
+// for (let index = 0; index < linksNav.length; index++) {
+//   linksNav[index].addEventListener("click", () => {
+//     for (let index = 0; index < linksNav.length; index++) {
+//       linksNav[index].classList.remove("active");
+//     }
+//     linksNav[index].classList.add("active");
+//   });
+// }
+
+const nav = document.querySelector(".sidebar__nav");
+let activeEl;
+nav.addEventListener("click", (e) => {
+  if (activeEl === e.target) return;
+  if (e.target.classList.contains("sidebar__nav-links")) {
+    if (activeEl) activeEl.classList.remove("active");
+    activeEl = e.target;
+    e.target.classList.add("active");
+  }
+});
