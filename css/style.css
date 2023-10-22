@@ -41,9 +41,6 @@ button:hover {
 
 a {
   cursor: pointer;
-}
-
-a:-webkit-any-link {
   text-decoration: none;
   color: initial;
 }
@@ -203,14 +200,14 @@ ul {
 .sidebar {
   position: absolute;
   top: 0;
-  left: -320px;
+  left: -360px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 270px;
   padding: 20px 24px 32px;
   flex-shrink: 0;
-  width: 310px;
+  width: 100%;
   background-color: #fff;
   box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
     -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
@@ -358,6 +355,10 @@ ul {
   .services__img {
     max-width: 360px;
   }
+
+  .sidebar {
+    max-width: 320px;
+  }
 }
 
 @media (min-width: 1120px) {
@@ -366,7 +367,29 @@ ul {
   }
 
   .header {
-    padding: 20px 32px;
+    padding: 0 32px;
+    height: 0;
+  }
+
+  .header__wrapper {
+    justify-content: flex-end;
+  }
+
+  .header__left {
+    display: none;
+  }
+
+  .header__right {
+    padding-top: 42px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .services {
+    margin-top: 42px;
   }
 
   .services__title::before {
@@ -386,6 +409,12 @@ ul {
     max-width: 530px;
     margin-bottom: 42px;
   }
+
+  .sidebar {
+    position: static;
+    padding-top: 30px;
+    box-shadow: none;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -396,5 +425,9 @@ ul {
   .header__wrapper {
     margin: 0 auto;
     max-width: 1440px;
+  }
+
+  .services {
+    flex: 2 0 auto;
   }
 }
