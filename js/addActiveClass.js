@@ -21,7 +21,7 @@ closeMenu.addEventListener("click", () => {
 // }
 
 const nav = document.querySelector(".sidebar__nav");
-let activeEl;
+let activeEl = document.querySelector(".active");
 nav.addEventListener("click", (e) => {
   if (activeEl === e.target) return;
   if (e.target.classList.contains("sidebar__nav-links")) {
