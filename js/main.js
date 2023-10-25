@@ -26,5 +26,5 @@ const enableSwiper = function () {
   });
 };
 
-breakpoint.addListener(breakpointChecker);
+breakpoint.addEventListener("change", breakpointChecker);
 breakpointChecker();
