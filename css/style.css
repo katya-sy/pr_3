@@ -222,13 +222,12 @@ ul {
 
 .brands__swiper-wrapper {
   padding-top: 16px;
-  gap: 16px;
 }
 
 .brands__swiper-slide {
   display: flex;
   justify-content: space-between;
-  max-width: 240px;
+  box-sizing: border-box;
   border-radius: 6px;
   border: 1px solid #eaeaea;
   padding: 16px;
@@ -237,6 +236,17 @@ ul {
 
 .brands__swiper-pagination {
   position: static;
+  margin-top: 16px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #b5b6bc;
 }
 
 .sidebar {
