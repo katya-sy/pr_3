@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/swiper.min.js"></script>
     <script src="js/tabs.js" defer></script>
     <script src="js/addActiveClass.js" defer></script>
+    <script src="js/main.js" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -39,145 +42,278 @@
       </div>
     </header>
     <main>
-      <section class="services">
-        <div class="container">
-          <h2 class="services__title">Услуги и сервисы</h2>
-          <div class="tabs" data-tabs="tab">
-            <ul class="services__menu tabs__nav">
-              <li class="tabs__nav-item">
-                <button
-                  class="services__item tabs__nav-btn tabs__nav-btn--active"
-                  type="button"
-                >
-                  Ремонтируемые устройства
-                </button>
-              </li>
-              <li class="tabs__nav-item">
-                <button class="services__item tabs__nav-btn" type="button">
-                  Ремонтируемые бренды
-                </button>
-              </li>
-              <li class="tabs__nav-item">
-                <button class="services__item tabs__nav-btn" type="button">
-                  Цены на услуги
-                </button>
-              </li>
-              <li class="tabs__nav-item">
-                <button class="services__item tabs__nav-btn" type="button">
-                  Адреса сервисных центров
-                </button>
-              </li>
-              <li class="tabs__nav-item">
-                <button class="services__item tabs__nav-btn" type="button">
-                  Специальные цены
-                </button>
-              </li>
-            </ul>
-            <div class="tabs__content">
-              <div class="tabs__panel">
-                <div class="services__wrapper">
-                  <div class="services__text">
-                    <p class="services__info">
-                      Мы являемся авторизованным сервисным центром по ремонту
-                      техники Dell. Только у нас вы можете отремонтировать свой
-                      ноутбук Dell с официальной гарантией производителя.
-                    </p>
-                    <button class="services__btn">
-                      <img src="img/arrow.svg" class="services__icon" />
-                      <p class="services__btn-text">Читать далее</p>
-                    </button>
+      <div class="main__wrapper">
+        <section class="services">
+          <div class="container">
+            <h2 class="services__title">Услуги и сервисы</h2>
+            <div class="tabs" data-tabs="tab">
+              <ul class="services__menu tabs__nav">
+                <li class="tabs__nav-item">
+                  <button
+                    class="services__item tabs__nav-btn tabs__nav-btn--active"
+                    type="button"
+                  >
+                    Ремонтируемые устройства
+                  </button>
+                </li>
+                <li class="tabs__nav-item">
+                  <button class="services__item tabs__nav-btn" type="button">
+                    Ремонтируемые бренды
+                  </button>
+                </li>
+                <li class="tabs__nav-item">
+                  <button class="services__item tabs__nav-btn" type="button">
+                    Цены на услуги
+                  </button>
+                </li>
+                <li class="tabs__nav-item">
+                  <button class="services__item tabs__nav-btn" type="button">
+                    Адреса сервисных центров
+                  </button>
+                </li>
+                <li class="tabs__nav-item">
+                  <button class="services__item tabs__nav-btn" type="button">
+                    Специальные цены
+                  </button>
+                </li>
+              </ul>
+              <div class="tabs__content">
+                <div class="tabs__panel">
+                  <div class="services__wrapper">
+                    <div class="services__text">
+                      <p class="services__info">
+                        Мы являемся авторизованным сервисным центром по ремонту
+                        техники Dell. Только у нас вы можете отремонтировать
+                        свой ноутбук Dell с официальной гарантией производителя.
+                      </p>
+                      <button class="services__btn">
+                        <img src="img/arrow.svg" class="services__icon" />
+                        <p class="services__btn-text">Читать далее</p>
+                      </button>
+                    </div>
+                    <img
+                      src="img/picture.png"
+                      alt="картинка"
+                      class="services__img"
+                    />
                   </div>
-                  <img
-                    src="img/picture.png"
-                    alt="картинка"
-                    class="services__img"
-                  />
                 </div>
-              </div>
-              <div class="tabs__panel">
-                <div class="services__wrapper">
-                  <div class="services__text">
-                    <p class="services__info">
-                      Мы являемся авторизованным сервисным центром по ремонту
-                      техники Dell. Только у нас вы можете отремонтировать свой
-                      ноутбук Dell с официальной гарантией производителя.2
-                    </p>
-                    <button class="services__btn">
-                      <img src="img/arrow.svg" class="services__icon" />
-                      <p class="services__btn-text">Читать далее</p>
-                    </button>
+                <div class="tabs__panel">
+                  <div class="services__wrapper">
+                    <div class="services__text">
+                      <p class="services__info">
+                        Мы являемся авторизованным сервисным центром по ремонту
+                        техники Dell. Только у нас вы можете отремонтировать
+                        свой ноутбук Dell с официальной гарантией
+                        производителя.2
+                      </p>
+                      <button class="services__btn">
+                        <img src="img/arrow.svg" class="services__icon" />
+                        <p class="services__btn-text">Читать далее</p>
+                      </button>
+                    </div>
+                    <img
+                      src="img/picture.png"
+                      alt="картинка"
+                      class="services__img"
+                    />
                   </div>
-                  <img
-                    src="img/picture.png"
-                    alt="картинка"
-                    class="services__img"
-                  />
                 </div>
-              </div>
-              <div class="tabs__panel">
-                <div class="services__wrapper">
-                  <div class="services__text">
-                    <p class="services__info">
-                      Мы являемся авторизованным сервисным центром по ремонту
-                      техники Dell. Только у нас вы можете отремонтировать свой
-                      ноутбук Dell с официальной гарантией производителя.3
-                    </p>
-                    <button class="services__btn">
-                      <img src="img/arrow.svg" class="services__icon" />
-                      <p class="services__btn-text">Читать далее</p>
-                    </button>
+                <div class="tabs__panel">
+                  <div class="services__wrapper">
+                    <div class="services__text">
+                      <p class="services__info">
+                        Мы являемся авторизованным сервисным центром по ремонту
+                        техники Dell. Только у нас вы можете отремонтировать
+                        свой ноутбук Dell с официальной гарантией
+                        производителя.3
+                      </p>
+                      <button class="services__btn">
+                        <img src="img/arrow.svg" class="services__icon" />
+                        <p class="services__btn-text">Читать далее</p>
+                      </button>
+                    </div>
+                    <img
+                      src="img/picture.png"
+                      alt="картинка"
+                      class="services__img"
+                    />
                   </div>
-                  <img
-                    src="img/picture.png"
-                    alt="картинка"
-                    class="services__img"
-                  />
                 </div>
-              </div>
-              <div class="tabs__panel">
-                <div class="services__wrapper">
-                  <div class="services__text">
-                    <p class="services__info">
-                      Мы являемся авторизованным сервисным центром по ремонту
-                      техники Dell. Только у нас вы можете отремонтировать свой
-                      ноутбук Dell с официальной гарантией производителя.4
-                    </p>
-                    <button class="services__btn">
-                      <img src="img/arrow.svg" class="services__icon" />
-                      <p class="services__btn-text">Читать далее</p>
-                    </button>
+                <div class="tabs__panel">
+                  <div class="services__wrapper">
+                    <div class="services__text">
+                      <p class="services__info">
+                        Мы являемся авторизованным сервисным центром по ремонту
+                        техники Dell. Только у нас вы можете отремонтировать
+                        свой ноутбук Dell с официальной гарантией
+                        производителя.4
+                      </p>
+                      <button class="services__btn">
+                        <img src="img/arrow.svg" class="services__icon" />
+                        <p class="services__btn-text">Читать далее</p>
+                      </button>
+                    </div>
+                    <img
+                      src="img/picture.png"
+                      alt="картинка"
+                      class="services__img"
+                    />
                   </div>
-                  <img
-                    src="img/picture.png"
-                    alt="картинка"
-                    class="services__img"
-                  />
                 </div>
-              </div>
-              <div class="tabs__panel">
-                <div class="services__wrapper">
-                  <div class="services__text">
-                    <p class="services__info">
-                      Мы являемся авторизованным сервисным центром по ремонту
-                      техники Dell. Только у нас вы можете отремонтировать свой
-                      ноутбук Dell с официальной гарантией производителя.5
-                    </p>
-                    <button class="services__btn">
-                      <img src="img/arrow.svg" class="services__icon" />
-                      <p class="services__btn-text">Читать далее</p>
-                    </button>
+                <div class="tabs__panel">
+                  <div class="services__wrapper">
+                    <div class="services__text">
+                      <p class="services__info">
+                        Мы являемся авторизованным сервисным центром по ремонту
+                        техники Dell. Только у нас вы можете отремонтировать
+                        свой ноутбук Dell с официальной гарантией
+                        производителя.5
+                      </p>
+                      <button class="services__btn">
+                        <img src="img/arrow.svg" class="services__icon" />
+                        <p class="services__btn-text">Читать далее</p>
+                      </button>
+                    </div>
+                    <img
+                      src="img/picture.png"
+                      alt="картинка"
+                      class="services__img"
+                    />
                   </div>
-                  <img
-                    src="img/picture.png"
-                    alt="картинка"
-                    class="services__img"
-                  />
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        <section class="brands">
+          <div class="brands__head">
+            <div class="container">
+              <h3 class="brands__title">Ремонт техники различных брендов</h3>
+            </div>
+          </div>
+          <div class="container">
+            <div class="swiper brands__swiper">
+              <div class="swiper-wrapper brands__swiper-wrapper">
+                <div class="swiper-slide brands__swiper-slide">
+                  <img
+                    src="img/swiper-logo.svg"
+                    alt="лого"
+                    class="brands__swiper-logo"
+                  />
+                  <button class="brands__swiper-btn">
+                    <img src="img/go.svg" />
+                  </button>
+                </div>
+                <div class="swiper-slide brands__swiper-slide">
+                  <img
+                    src="img/swiper-logo.svg"
+                    alt="лого"
+                    class="brands__swiper-logo"
+                  />
+                  <button class="brands__swiper-btn">
+                    <img src="img/go.svg" />
+                  </button>
+                </div>
+                <div class="swiper-slide brands__swiper-slide">
+                  <img
+                    src="img/swiper-logo.svg"
+                    alt="лого"
+                    class="brands__swiper-logo"
+                  />
+                  <button class="brands__swiper-btn">
+                    <img src="img/go.svg" />
+                  </button>
+                </div>
+                <div class="swiper-slide brands__swiper-slide">
+                  <img
+                    src="img/swiper-logo.svg"
+                    alt="лого"
+                    class="brands__swiper-logo"
+                  />
+                  <button class="brands__swiper-btn">
+                    <img src="img/go.svg" />
+                  </button>
+                </div>
+                <div class="swiper-slide brands__swiper-slide">
+                  <img
+                    src="img/swiper-logo.svg"
+                    alt="лого"
+                    class="brands__swiper-logo"
+                  />
+                  <button class="brands__swiper-btn">
+                    <img src="img/go.svg" />
+                  </button>
+                </div>
+                <div class="swiper-slide brands__swiper-slide">
+                  <img
+                    src="img/swiper-logo.svg"
+                    alt="лого"
+                    class="brands__swiper-logo"
+                  />
+                  <button class="brands__swiper-btn">
+                    <img src="img/go.svg" />
+                  </button>
+                </div>
+                <div class="swiper-slide brands__swiper-slide">
+                  <img
+                    src="img/swiper-logo.svg"
+                    alt="лого"
+                    class="brands__swiper-logo"
+                  />
+                  <button class="brands__swiper-btn">
+                    <img src="img/go.svg" />
+                  </button>
+                </div>
+                <div class="swiper-slide brands__swiper-slide">
+                  <img
+                    src="img/swiper-logo.svg"
+                    alt="лого"
+                    class="brands__swiper-logo"
+                  />
+                  <button class="brands__swiper-btn">
+                    <img src="img/go.svg" />
+                  </button>
+                </div>
+                <div class="swiper-slide brands__swiper-slide">
+                  <img
+                    src="img/swiper-logo.svg"
+                    alt="лого"
+                    class="brands__swiper-logo"
+                  />
+                  <button class="brands__swiper-btn">
+                    <img src="img/go.svg" />
+                  </button>
+                </div>
+                <div class="swiper-slide brands__swiper-slide">
+                  <img
+                    src="img/swiper-logo.svg"
+                    alt="лого"
+                    class="brands__swiper-logo"
+                  />
+                  <button class="brands__swiper-btn">
+                    <img src="img/go.svg" />
+                  </button>
+                </div>
+                <div class="swiper-slide brands__swiper-slide">
+                  <img
+                    src="img/swiper-logo.svg"
+                    alt="лого"
+                    class="brands__swiper-logo"
+                  />
+                  <button class="brands__swiper-btn">
+                    <img src="img/go.svg" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="swiper-pagination brands__swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
       <section id="sidebar" class="sidebar">
         <div class="sidebar__wrapper">
           <div class="sidebar__header">
