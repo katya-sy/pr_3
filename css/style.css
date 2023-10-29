@@ -465,9 +465,13 @@ ul {
     padding-top: 42px;
   }
 
-  main {
+  .wrapper {
     display: flex;
     flex-direction: row-reverse;
+  }
+
+  .main__wrapper {
+    flex: 1 1 auto;
   }
 
   .services {
