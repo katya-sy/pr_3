@@ -426,6 +426,18 @@ ul {
     display: flex;
   }
 
+  .brands__swiper-wrapper {
+    height: 160px;
+  }
+
+  .brands__swiper-wrapper--active {
+    height: auto;
+  }
+
+  .brands__btn--active img {
+    transform: rotate(180deg);
+  }
+
   .sidebar {
     max-width: 320px;
   }
@@ -478,6 +490,10 @@ ul {
   .services__img {
     max-width: 530px;
     margin-bottom: 42px;
+  }
+
+  .brands__swiper-wrapper {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .sidebar {

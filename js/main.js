@@ -13,12 +13,10 @@ const breakpointChecker = function () {
 
 const enableSwiper = function () {
   swiper = new Swiper(".swiper", {
-    // Optional parameters
     slidesPerView: 1.2,
     direction: "horizontal",
     spaceBetween: 16,
 
-    // If we need pagination
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -28,3 +26,18 @@ const enableSwiper = function () {
 
 breakpoint.addEventListener("change", breakpointChecker);
 breakpointChecker();
+
+const brandsWrapper = document.querySelector(".brands__swiper-wrapper");
+const showMore = document.querySelector(".brands__btn");
+const showMoreText = showMore.querySelector(".brands__btn-text");
+showMore.addEventListener("click", () => {
+  if (brandsWrapper.classList.contains("brands__swiper-wrapper--active")) {
+    brandsWrapper.classList.remove("brands__swiper-wrapper--active");
+    showMoreText.innerText = "Показать все";
+    showMore.classList.remove("brands__btn--active");
+  } else {
+    brandsWrapper.classList.add("brands__swiper-wrapper--active");
+    showMoreText.innerText = "Скрыть";
+    showMore.classList.add("brands__btn--active");
+  }
+});
