@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/swiper.min.js"></script>
     <script src="js/tabs.js" defer></script>
-    <script src="js/addActiveClass.js" defer></script>
     <script src="js/main.js" defer></script>
     <title>Document</title>
   </head>
   <body>
     <div class="wrapper">
       <div class="main__wrapper">
-        <div class="container">
-          <header class="header">
+        <header class="header">
+          <div class="container">
             <div class="header__wrapper">
               <div class="header__left">
                 <button
@@ -59,8 +58,8 @@
                 </button>
               </div>
             </div>
-          </header>
-        </div>
+          </div>
+        </header>
 
         <main>
           <section class="services">
@@ -365,6 +364,8 @@
         </main>
       </div>
 
+      <div class="overlay"></div>
+
       <section id="sidebar" class="sidebar">
         <div class="sidebar__wrapper">
           <div class="sidebar__header">
@@ -400,7 +401,9 @@
           </div>
           <ul class="sidebar__nav">
             <li class="sidebar__nav-item">
-              <a class="sidebar__nav-links active" href="#">Ремонт техники</a>
+              <a class="sidebar__nav-links sidebar__nav-links--active" href="#"
+                >Ремонт техники</a
+              >
             </li>
             <li class="sidebar__nav-item">
               <a class="sidebar__nav-links" href="#">Ремонт техники</a>

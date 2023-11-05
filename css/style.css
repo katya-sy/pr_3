@@ -57,7 +57,7 @@ ul {
 }
 
 .header {
-  padding: 20px 16px;
+  padding: 20px 0;
   background-color: #fff;
 }
 
@@ -220,7 +220,7 @@ ul {
 }
 
 .brands__swiper {
-  z-index: auto;
+  z-index: 0;
 }
 
 .brands__swiper-wrapper {
@@ -254,6 +254,20 @@ ul {
 
 .brands__btn {
   display: none;
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .sidebar {
@@ -317,14 +331,14 @@ ul {
   letter-spacing: -0.2px;
 }
 
-.active {
+.sidebar__nav-links--active {
   display: flex;
   align-items: center;
   gap: 20px;
   color: #7e7e82;
 }
 
-.active::before {
+.sidebar__nav-links--active::before {
   content: "";
   position: absolute;
   display: block;
@@ -378,6 +392,12 @@ ul {
 
 .sidebar__change-item button:active {
   color: #7e7e82;
+}
+
+@media (min-width: 576px) {
+  .sidebar--active {
+    width: 320px;
+  }
 }
 
 @media (min-width: 768px) {
