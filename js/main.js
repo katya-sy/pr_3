@@ -69,13 +69,13 @@ const brandsWrapper = document.querySelector(".brands__swiper-wrapper");
 const showMore = document.querySelector(".brands__btn");
 const showMoreText = showMore.querySelector(".brands__btn-text");
 showMore.addEventListener("click", () => {
-  if (brandsWrapper.classList.contains("brands__swiper-wrapper--active")) {
-    brandsWrapper.classList.remove("brands__swiper-wrapper--active");
+  if (brandsWrapper.classList.contains("section__swiper-wrapper--active")) {
+    brandsWrapper.classList.remove("section__swiper-wrapper--active");
     showMoreText.innerText = "Показать все";
-    showMore.classList.remove("brands__btn--active");
+    showMore.classList.remove("section__btn--active");
   } else {
-    brandsWrapper.classList.add("brands__swiper-wrapper--active");
+    brandsWrapper.classList.add("section__swiper-wrapper--active");
     showMoreText.innerText = "Скрыть";
-    showMore.classList.add("brands__btn--active");
+    showMore.classList.add("section__btn--active");
   }
 });

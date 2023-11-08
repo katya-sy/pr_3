@@ -200,17 +200,17 @@ ul {
   height: auto;
 }
 
-.brands {
+.section {
   padding: 0 0 40px;
 }
 
-.brands__head {
+.section__head {
   border-top: 1px solid #d9fff5;
   padding: 16px 0;
   background: linear-gradient(270deg, #f8f8f8 0%, #fff 98.61%);
 }
 
-.brands__title {
+.section__title {
   color: #7e7e82;
   font-size: 16px;
   font-weight: 400;
@@ -219,17 +219,15 @@ ul {
   text-transform: uppercase;
 }
 
-.brands__swiper {
+.section__swiper {
   z-index: 0;
 }
 
-.brands__swiper-wrapper {
+.section__swiper-wrapper {
   padding-top: 16px;
 }
 
-.brands__swiper-slide {
-  display: flex;
-  justify-content: space-between;
+.section__swiper-slide {
   box-sizing: border-box;
   border-radius: 6px;
   border: 1px solid #eaeaea;
@@ -237,9 +235,18 @@ ul {
   background: #fff;
 }
 
-.brands__swiper-pagination {
+.section__swiper-pagination {
   position: static;
   margin-top: 16px;
+}
+
+.section__btn {
+  display: none;
+}
+
+.brands__swiper-slide {
+  display: flex;
+  justify-content: space-between;
 }
 
 .swiper-pagination-bullet {
@@ -252,8 +259,22 @@ ul {
   background-color: #b5b6bc;
 }
 
-.brands__btn {
-  display: none;
+.types__swiper-slide {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.types__swiper-title {
+  color: #1b1c21;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.types__swiper-btn {
+  align-self: end;
 }
 
 .overlay {
@@ -436,25 +457,22 @@ ul {
     max-width: 360px;
   }
 
-  .brands__swiper-wrapper {
+  .section__swiper-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px 24px;
-  }
-
-  .brands__btn {
-    display: flex;
-  }
-
-  .brands__swiper-wrapper {
     height: 160px;
   }
 
-  .brands__swiper-wrapper--active {
+  .section__btn {
+    display: flex;
+  }
+
+  .section__swiper-wrapper--active {
     height: auto;
   }
 
-  .brands__btn--active img {
+  .section__btn--active img {
     transform: rotate(180deg);
   }
 
@@ -516,7 +534,7 @@ ul {
     margin-bottom: 42px;
   }
 
-  .brands__swiper-wrapper {
+  .section__swiper-wrapper {
     grid-template-columns: repeat(4, 1fr);
   }
 
