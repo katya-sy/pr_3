@@ -13,17 +13,6 @@ closeMenuBtn.addEventListener("click", () => {
   overlay.style.display = "none";
 });
 
-// const linksNav = document.querySelectorAll(".sidebar__nav-item");
-// console.log(linksNav);
-// for (let index = 0; index < linksNav.length; index++) {
-//   linksNav[index].addEventListener("click", () => {
-//     for (let index = 0; index < linksNav.length; index++) {
-//       linksNav[index].classList.remove("active");
-//     }
-//     linksNav[index].classList.add("active");
-//   });
-// }
-
 const nav = document.querySelector(".sidebar__nav");
 let activeEl = document.querySelector(".sidebar__nav-links--active");
 nav.addEventListener("click", (e) => {
@@ -65,17 +54,30 @@ const enableSwiper = function () {
 breakpoint.addEventListener("change", breakpointChecker);
 breakpointChecker();
 
-const brandsWrapper = document.querySelector(".brands__swiper-wrapper");
-const showMore = document.querySelector(".brands__btn");
-const showMoreText = showMore.querySelector(".brands__btn-text");
-showMore.addEventListener("click", () => {
-  if (brandsWrapper.classList.contains("section__swiper-wrapper--active")) {
-    brandsWrapper.classList.remove("section__swiper-wrapper--active");
-    showMoreText.innerText = "Показать все";
-    showMore.classList.remove("section__btn--active");
+const showMoreFunc = function (wrapper, btn, btnText) {
+  if (wrapper.classList.contains("section__swiper-wrapper--active")) {
+    wrapper.classList.remove("section__swiper-wrapper--active");
+    btnText.innerText = "Показать все";
+    btn.classList.remove("section__btn--active");
   } else {
-    brandsWrapper.classList.add("section__swiper-wrapper--active");
-    showMoreText.innerText = "Скрыть";
-    showMore.classList.add("section__btn--active");
+    wrapper.classList.add("section__swiper-wrapper--active");
+    btnText.innerText = "Скрыть";
+    btn.classList.add("section__btn--active");
   }
-});
+};
+
+const brandsWrapper = document.querySelector(".brands__swiper-wrapper");
+const brandsShowMore = document.querySelector(".brands__btn");
+const brandsShowMoreText = brandsShowMore.querySelector(".brands__btn-text");
+
+brandsShowMore.addEventListener("click", () =>
+  showMoreFunc(brandsWrapper, brandsShowMore, brandsShowMoreText)
+);
+
+const typesWrapper = document.querySelector(".types__swiper-wrapper");
+const typesShowMore = document.querySelector(".types__btn");
+const typesShowMoreText = typesShowMore.querySelector(".types__btn-text");
+
+typesShowMore.addEventListener("click", () =>
+  showMoreFunc(typesWrapper, typesShowMore, typesShowMoreText)
+);

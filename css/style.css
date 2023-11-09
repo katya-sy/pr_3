@@ -461,7 +461,7 @@ ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px 24px;
-    height: 160px;
+    height: 170px;
   }
 
   .section__btn {
