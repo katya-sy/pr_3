@@ -2,19 +2,20 @@
 const openMenuBtn = document.getElementById("burger");
 const sidebar = document.getElementById("sidebar");
 const overlay = document.querySelector(".overlay");
+const closeMenuBtn = document.getElementById("close-menu");
+const nav = document.querySelector(".sidebar__nav");
+let activeEl = document.querySelector(".sidebar__nav-links--active");
+
 openMenuBtn.addEventListener("click", () => {
   sidebar.classList.add("sidebar--active");
   overlay.style.display = "block";
 });
 
-const closeMenuBtn = document.getElementById("close-menu");
 closeMenuBtn.addEventListener("click", () => {
   sidebar.classList.remove("sidebar--active");
   overlay.style.display = "none";
 });
 
-const nav = document.querySelector(".sidebar__nav");
-let activeEl = document.querySelector(".sidebar__nav-links--active");
 nav.addEventListener("click", (e) => {
   if (activeEl === e.target) return;
   if (e.target.classList.contains("sidebar__nav-links")) {
@@ -25,18 +26,8 @@ nav.addEventListener("click", (e) => {
 });
 
 // swiper
-const breakpoint = window.matchMedia("(min-width:768px)");
-
-let swiper;
-
-const breakpointChecker = function () {
-  if (breakpoint.matches === true) {
-    if (swiper !== undefined) swiper.destroy(true, true);
-    return;
-  } else {
-    return enableSwiper();
-  }
-};
+const addScript = document.querySelector("script");
+const media = window.matchMedia("(max-width:768px)");
 
 const enableSwiper = function () {
   swiper = new Swiper(".swiper", {
@@ -51,8 +42,28 @@ const enableSwiper = function () {
   });
 };
 
-breakpoint.addEventListener("change", breakpointChecker);
-breakpointChecker();
+if (media.matches) {
+  const scriptService = document.createElement("script");
+  scriptService.src = "js/swiper.min.js";
+  scriptService.defer = "true";
+  document.head.insertBefore(scriptService, addScript);
+
+  const promise = new Promise((resolve, reject) => {
+    scriptService.addEventListener("load", () => {
+      resolve();
+    });
+
+    scriptService.addEventListener("error", () => {
+      reject();
+    });
+  });
+
+  promise
+    .then(() => {
+      enableSwiper();
+    })
+    .catch((err) => alert(err.message));
+}
 
 const showMoreFunc = function (wrapper, btn, btnText) {
   if (wrapper.classList.contains("section__swiper-wrapper--active")) {
