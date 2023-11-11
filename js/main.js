@@ -65,7 +65,14 @@ if (media.matches) {
     .catch((err) => alert(err.message));
 }
 
-const showMoreFunc = function (wrapper, btn, btnText) {
+// wrappers for show-more btn
+const brandsWrapper = document.querySelector(".brands__swiper-wrapper");
+const brandsShowMore = document.querySelector(".brands__btn");
+const typesWrapper = document.querySelector(".types__swiper-wrapper");
+const typesShowMore = document.querySelector(".types__btn");
+
+const showMoreFunc = function (wrapper, btn) {
+  const btnText = btn.querySelector("show-more__text");
   if (wrapper.classList.contains("section__swiper-wrapper--active")) {
     wrapper.classList.remove("section__swiper-wrapper--active");
     btnText.innerText = "Показать все";
@@ -77,18 +84,10 @@ const showMoreFunc = function (wrapper, btn, btnText) {
   }
 };
 
-const brandsWrapper = document.querySelector(".brands__swiper-wrapper");
-const brandsShowMore = document.querySelector(".brands__btn");
-const brandsShowMoreText = brandsShowMore.querySelector(".brands__btn-text");
-
 brandsShowMore.addEventListener("click", () =>
-  showMoreFunc(brandsWrapper, brandsShowMore, brandsShowMoreText)
+  showMoreFunc(brandsWrapper, brandsShowMore)
 );
 
-const typesWrapper = document.querySelector(".types__swiper-wrapper");
-const typesShowMore = document.querySelector(".types__btn");
-const typesShowMoreText = typesShowMore.querySelector(".types__btn-text");
-
 typesShowMore.addEventListener("click", () =>
-  showMoreFunc(typesWrapper, typesShowMore, typesShowMoreText)
+  showMoreFunc(typesWrapper, typesShowMore)
 );
