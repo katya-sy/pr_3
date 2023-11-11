@@ -96,29 +96,31 @@ typesShowMore.addEventListener("click", () =>
 const priceSwiper = document.querySelector(".price__swiper-wrapper");
 let priceSwiperSlides = priceSwiper.querySelectorAll(".price__swiper-slide");
 const priceTable = document.createElement("table");
-priceTable.classList.add("price__table");
 const priceTableHead = document.createElement("thead");
 const priceTableBody = document.createElement("tbody");
 
-const fillTable = function () {
+const fillTableHead = function () {
   const tableHeadRow = document.createElement("tr");
   priceTableHead.append(tableHeadRow);
+
   let tableHeaders = document.querySelectorAll(".price__swiper-title");
   tableHeaders = Array.from(tableHeaders);
   tableHeaders = tableHeaders.slice(0, 3);
-  for (const value of tableHeaders) {
+
+  tableHeaders.forEach((value) => {
     const header = document.createElement("th");
     header.innerText = value.innerText;
     tableHeadRow.append(header);
-  }
+  });
   tableHeadRow.append(document.createElement("th"));
+};
 
-  priceSwiperSlides = Array.from(priceSwiperSlides);
-  for (const value of priceSwiperSlides) {
+const fillTableBody = function () {
+  priceSwiperSlides.forEach((value) => {
     const tableRow = document.createElement("tr");
     let tableData = value.querySelectorAll(".price__td");
-    tableData = Array.from(tableData);
-    for (const data of tableData) {
+
+    tableData.forEach((data) => {
       const tableCell = document.createElement("td");
       if (data.classList.contains("price__list-item--btn")) {
         tableCell.innerHTML = data.innerHTML;
@@ -126,14 +128,18 @@ const fillTable = function () {
         tableCell.innerText = data.innerText;
       }
       tableRow.append(tableCell);
-    }
+    });
     priceTableBody.append(tableRow);
-  }
+  });
 };
 
 if (!media.matches) {
-  fillTable();
+  fillTableHead();
+  fillTableBody();
+
   priceSwiper.replaceWith(priceTable);
   priceTable.append(priceTableHead);
   priceTable.append(priceTableBody);
+
+  priceTable.classList.add("price__table");
 }
