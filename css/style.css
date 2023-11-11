@@ -549,6 +549,44 @@ ul {
     transform: rotate(180deg);
   }
 
+  .price {
+    padding: 0 0 50px;
+  }
+
+  .price__table {
+    margin-top: 16px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .price__table thead {
+    text-align: left;
+  }
+
+  .price__table th,
+  .price__table td {
+    padding: 16px 0;
+  }
+
+  .price__table th:first-child,
+  .price__table td:first-child {
+    padding-left: 16px;
+    width: 50%;
+  }
+
+  .price__table tbody tr:not(:last-child) {
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .price__table tbody {
+    border-radius: 6px;
+    background-color: #fff;
+  }
+
+  .price__note {
+    max-width: 420px;
+  }
+
   .sidebar {
     max-width: 320px;
   }

@@ -72,7 +72,7 @@ const typesWrapper = document.querySelector(".types__swiper-wrapper");
 const typesShowMore = document.querySelector(".types__btn");
 
 const showMoreFunc = function (wrapper, btn) {
-  const btnText = btn.querySelector("show-more__text");
+  const btnText = btn.querySelector(".show-more__text");
   if (wrapper.classList.contains("section__swiper-wrapper--active")) {
     wrapper.classList.remove("section__swiper-wrapper--active");
     btnText.innerText = "Показать все";
@@ -109,6 +109,7 @@ const fillTableHead = function () {
 
   tableHeaders.forEach((value) => {
     const header = document.createElement("th");
+    header.classList.add("price__swiper-title");
     header.innerText = value.innerText;
     tableHeadRow.append(header);
   });
@@ -126,6 +127,7 @@ const fillTableBody = function () {
         tableCell.innerHTML = data.innerHTML;
       } else {
         tableCell.innerText = data.innerText;
+        tableCell.classList.add("price__swiper-desc");
       }
       tableRow.append(tableCell);
     });
