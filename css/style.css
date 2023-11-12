@@ -344,10 +344,40 @@ ul {
   display: flex;
   align-items: center;
   gap: 8px;
+  color: #1b1c21;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
 }
 
 .price__offer img {
   padding-top: 3px;
+}
+
+.footer {
+  border-top: 1px solid #d9fff5;
+  padding: 16px 0 20px;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer__item {
+  color: #7e7e82;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  opacity: 0.7218;
+}
+
+.footer__item a {
+  color: #7e7e82;
 }
 
 .overlay {
@@ -585,6 +615,24 @@ ul {
 
   .price__note {
     max-width: 420px;
+  }
+
+  .footer {
+    padding: 32px 0 25px;
+  }
+
+  .footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__item {
+    text-align: left;
+  }
+
+  .footer__item:last-child {
+    text-align: right;
+    max-width: 30%;
   }
 
   .sidebar {
