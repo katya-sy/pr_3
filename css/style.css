@@ -780,6 +780,29 @@ ul {
   .header__right {
     padding-top: 42px;
     z-index: 1;
+    gap: 32px;
+  }
+
+  .header__right .header__btn {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  .header__right .header__btn::before {
+    color: #1b1c21;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+
+  .header__right .header__btn:nth-child(1)::before {
+    content: "Оставить заявку";
+  }
+
+  .header__right .header__btn:nth-child(2)::before {
+    content: "Статус ремонта";
   }
 
   .wrapper {
