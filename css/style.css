@@ -779,6 +779,7 @@ ul {
 
   .header__right {
     padding-top: 42px;
+    z-index: 1;
   }
 
   .wrapper {
