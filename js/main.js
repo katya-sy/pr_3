@@ -28,6 +28,43 @@ nav.addEventListener("click", (e) => {
   }
 });
 
+// modal windows
+const callBtn = document.querySelector("#call");
+const feedbackBtn = document.querySelector("#feedback");
+const callModal = document.querySelector(".call");
+const feedbackModal = document.querySelector(".feedback");
+const closeCallModalBtn = document.querySelector("#close-modal-call");
+const closeFeedbackModalBtn = document.querySelector("#close-modal-feedback");
+
+const openModal = function (modal) {
+  modal.classList.add("modal--active");
+  overlay.style.display = "block";
+  document.querySelector("html").style.overflowY = "hidden";
+  sidebar.classList.remove("sidebar--active");
+};
+
+const closeModal = function (modal) {
+  modal.classList.remove("modal--active");
+  overlay.style.display = "none";
+  document.querySelector("html").style.overflowY = "auto";
+};
+
+callBtn.addEventListener("click", () => {
+  openModal(callModal);
+});
+
+feedbackBtn.addEventListener("click", () => {
+  openModal(feedbackModal);
+});
+
+closeCallModalBtn.addEventListener("click", () => {
+  closeModal(callModal);
+});
+
+closeFeedbackModalBtn.addEventListener("click", () => {
+  closeModal(feedbackModal);
+});
+
 // swiper
 const addScript = document.querySelector("script");
 const media = window.matchMedia("(max-width:768px)");
