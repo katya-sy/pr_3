@@ -9,13 +9,16 @@ let activeEl = document.querySelector(".sidebar__nav-links--active");
 openMenuBtn.addEventListener("click", () => {
   sidebar.classList.add("sidebar--active");
   overlay.style.display = "block";
+  document.querySelector("html").style.overflowY = "hidden";
 });
 
 closeMenuBtn.addEventListener("click", () => {
   sidebar.classList.remove("sidebar--active");
   overlay.style.display = "none";
+  document.querySelector("html").style.overflowY = "auto";
 });
 
+// sidebar links
 nav.addEventListener("click", (e) => {
   if (activeEl === e.target) return;
   if (e.target.classList.contains("sidebar__nav-links")) {

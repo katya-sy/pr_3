@@ -411,8 +411,12 @@ ul {
 }
 
 .sidebar--active {
+  position: fixed;
   width: 100%;
+  top: 0;
+  bottom: 0;
   left: 0;
+  overflow-y: auto;
   animation-name: sidebar;
   animation-duration: 1s;
 }
@@ -623,6 +627,7 @@ ul {
 
   .footer__wrapper {
     flex-direction: row;
+    align-items: flex-start;
     justify-content: space-between;
   }
 
@@ -669,6 +674,7 @@ ul {
 
   .main__wrapper {
     flex: 1 1 auto;
+    max-width: calc(100% - 320px);
   }
 
   .services {
@@ -681,7 +687,7 @@ ul {
 
   .services__menu {
     margin-bottom: 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   .services__info {
@@ -711,6 +717,11 @@ ul {
 @media (min-width: 1440px) {
   .container {
     max-width: 1400px;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    max-width: 1720px;
   }
 
   .header__wrapper {
