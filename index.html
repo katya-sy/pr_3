@@ -543,7 +543,9 @@
                       <li
                         class="price__list-item price__list-item--btn price__td"
                       >
-                        <button class="section__swiper-btn price__swiper-btn">
+                        <button
+                          class="section__swiper-btn price__swiper-btn btn btn--long"
+                        >
                           <span>Заказать</span>
                           <img src="img/goside.svg" />
                         </button>
@@ -577,7 +579,9 @@
                       <li
                         class="price__list-item price__list-item--btn price__td"
                       >
-                        <button class="section__swiper-btn price__swiper-btn">
+                        <button
+                          class="section__swiper-btn price__swiper-btn btn btn--long"
+                        >
                           <span>Заказать</span>
                           <img src="img/goside.svg" />
                         </button>
@@ -611,7 +615,9 @@
                       <li
                         class="price__list-item price__list-item--btn price__td"
                       >
-                        <button class="section__swiper-btn price__swiper-btn">
+                        <button
+                          class="section__swiper-btn price__swiper-btn btn btn--long"
+                        >
                           <span>Заказать</span>
                           <img src="img/goside.svg" />
                         </button>
@@ -645,7 +651,9 @@
                       <li
                         class="price__list-item price__list-item--btn price__td"
                       >
-                        <button class="section__swiper-btn price__swiper-btn">
+                        <button
+                          class="section__swiper-btn price__swiper-btn btn btn--long"
+                        >
                           <span>Заказать</span>
                           <img src="img/goside.svg" />
                         </button>
@@ -679,7 +687,9 @@
                       <li
                         class="price__list-item price__list-item--btn price__td"
                       >
-                        <button class="section__swiper-btn price__swiper-btn">
+                        <button
+                          class="section__swiper-btn price__swiper-btn btn btn--long"
+                        >
                           <span>Заказать</span>
                           <img src="img/goside.svg" />
                         </button>
@@ -829,6 +839,108 @@
           </ul>
         </div>
       </section>
+
+      <div class="modal feedback">
+        <button
+          id="close-modal-feedback"
+          class="modal__btn-close feedback__btn-close"
+          aria-label="закрыть модальное окно"
+        >
+          <img src="img/close.svg" class="modal__btn-img" aria-hidden />
+        </button>
+        <form action="" class="modal__form feedback__form">
+          <h2 class="modal__title feedback__title">Обратная связь</h2>
+          <div class="modal__form-wrapper feedback__form-wrapper">
+            <label
+              for="feedback-name"
+              class="modal__form-item feedback__form-item"
+            >
+              <input
+                id="feedback-name"
+                type="text"
+                placeholder="Имя"
+                class="modal__form-input feedback__form-input"
+              />
+            </label>
+            <label
+              for="feedback-tel"
+              class="modal__form-item feedback__form-item"
+            >
+              <input
+                id="feedback-tel"
+                type="text"
+                placeholder="Телефон"
+                class="modal__form-input feedback__form-input"
+              />
+            </label>
+            <label
+              for="feedback-email"
+              class="modal__form-item feedback__form-item"
+            >
+              <input
+                id="feedback-email"
+                type="email"
+                placeholder="Электронная почта"
+                class="modal__form-input feedback__form-input"
+              />
+            </label>
+            <label
+              for="feedback-message"
+              class="modal__form-item feedback__form-item"
+            >
+              <textarea
+                id="feedback-message"
+                type="text"
+                placeholder="Сообщение"
+                class="modal__form-input modal__form-input--big feedback__form-input"
+              ></textarea>
+            </label>
+          </div>
+          <p class="modal__desc feedback__desc">
+            Нажимая “отправить”, вы даете согласие на
+            <a href="#" class="modal__link">обработку персональных данных</a>
+            и соглашаетесь с нашей
+            <a href="#" class="modal__link">политикой конфиденциальности</a>
+          </p>
+          <button class="modal__btn feedback__btn btn btn--long">
+            <span>Отправить</span>
+            <img src="img/goside.svg" />
+          </button>
+        </form>
+      </div>
+
+      <div class="modal call">
+        <button
+          id="close-modal-call"
+          class="modal__btn-close call__btn-close"
+          aria-label="закрыть модальное окно"
+        >
+          <img src="img/close.svg" class="modal__btn-img" aria-hidden />
+        </button>
+        <form action="" class="modal__form call__form">
+          <h2 class="modal__title call__title">Заказать звонок</h2>
+          <div class="modal__form-wrapper call__form-wrapper">
+            <label for="call-tel" class="modal__form-item call__form-item">
+              <input
+                id="call-tel"
+                type="text"
+                placeholder="Телефон"
+                class="modal__form-input call__form-input"
+              />
+            </label>
+          </div>
+          <p class="modal__desc call__desc">
+            Нажимая “отправить”, вы даете согласие на
+            <a href="#" class="modal__link">обработку персональных данных</a>
+            и соглашаетесь с нашей
+            <a href="#" class="modal__link">политикой конфиденциальности</a>
+          </p>
+          <button class="modal__btn call__btn btn btn--long">
+            <span>Отправить</span>
+            <img src="img/goside.svg" />
+          </button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
